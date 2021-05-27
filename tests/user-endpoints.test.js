@@ -4,11 +4,9 @@ const app = require('../app.js');
 const User = require('../models/user.js');
 
 const getValidAttributes = () => {
-  const password = faker.internet.password();
   return {
     email: faker.unique(faker.internet.email),
-    password,
-    password_confirmation: password,
+    password: faker.internet.password(),
   };
 };
 
@@ -20,15 +18,6 @@ let payload;
 
 describe(`users endpoints`, () => {
   describe(`POST /users`, () => {
-    describe('without request body', () => {
-      beforeAll(async () => {
-        res = await request(app).post(`/users`);
-      });
-
-      it('returns 400 status', async () => {
-        expect(res.statusCode).toEqual(400);
-      });
-    });
     describe('when a valid payload is sent', () => {
       beforeAll(async () => {
         payload = getValidAttributes();
@@ -44,9 +33,8 @@ describe(`users endpoints`, () => {
       });
 
       it('returned object does not contain passwords', () => {
-        expect(res.body.password_confirmation).toBe(undefined);
         expect(res.body.password).toBe(undefined);
-        expect(res.body.encrypted_password).toBe(undefined);
+        expect(res.body.hashedPassword).toBe(undefined);
       });
     });
     describe('when a user with the same email already exists in DB', () => {
@@ -60,60 +48,29 @@ describe(`users endpoints`, () => {
       it('returns a 422 status', async () => {
         expect(res.status).toBe(422);
       });
-
-      it('returns an error message', async () => {
-        expect(res.body).toHaveProperty('errorMessage');
-      });
     });
 
     describe('when email is not provided', () => {
       beforeAll(async () => {
         res = await request(app).post(`/users`).send({
           password: 'zfeyfgeyfgr',
-          password_confirmation: 'zfeyfgeyfgr',
         });
       });
 
       it('returns a 422 status', async () => {
         expect(res.status).toBe(422);
-      });
-
-      it('returns an error message', async () => {
-        expect(res.body).toHaveProperty('errorMessage');
       });
     });
 
     describe('when password is not provided', () => {
       beforeAll(async () => {
         res = await request(app).post(`/users`).send({
-          password_confirmation: 'zfeyfgeyfgr',
           email: 'john.doe@gmail.com',
         });
       });
 
       it('returns a 422 status', async () => {
         expect(res.status).toBe(422);
-      });
-
-      it('returns an error message', async () => {
-        expect(res.body).toHaveProperty('errorMessage');
-      });
-    });
-
-    describe('when password_confirmation is not provided', () => {
-      beforeAll(async () => {
-        res = await request(app).post(`/users`).send({
-          password: 'zfeyfgeyfgr',
-          email: 'john.doe@gmail.com',
-        });
-      });
-
-      it('returns a 422 status', async () => {
-        expect(res.status).toBe(422);
-      });
-
-      it('returns an error message', async () => {
-        expect(res.body).toHaveProperty('errorMessage');
       });
     });
   });
