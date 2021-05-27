@@ -6,9 +6,6 @@ app.set('x-powered-by', false);
 
 app.use(express.json());
 
-// routes
-require('./routes')(app);
-
 // server setup
 const server = app.listen(SERVER_PORT, () => {
   if (!inTestEnv) {
