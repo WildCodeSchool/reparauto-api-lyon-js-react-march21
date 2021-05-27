@@ -4,18 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start:all": "docker-compose up",
     "start:server": "node app.js",
     "start:server:watch": "nodemon app.js",
-    "setup-db": "docker-compose up -d db",
     "start": "npm-run-all start:server",
     "start:watch": "npm-run-all start:server:watch",
     "dev": "npm-run-all setup-db start:watch",
     "test": "NODE_ENV=test jest --testRunner='jest-circus/runner' --maxWorkers=1",
-    "test:setup-db": "docker-compose up -d test_db",
-    "test:migrate-db": "db-migrate up -e test",
-    "wait-for-db": "node ./scripts/wait-for-db.js",
-    "test:setup-and-run": "NODE_ENV=test npm-run-all test:setup-db wait-for-db test:migrate-db test",
     "lint": "eslint --fix ."
   },
   "husky": {
