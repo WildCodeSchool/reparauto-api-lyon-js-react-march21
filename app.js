@@ -1,5 +1,5 @@
 const express = require('express');
-const { inTestEnv, SERVER_PORT } = require('./env');
+const { inTestEnv, PORT } = require('./env');
 
 const app = express();
 app.set('x-powered-by', false);
@@ -7,9 +7,9 @@ app.set('x-powered-by', false);
 app.use(express.json());
 
 // server setup
-const server = app.listen(SERVER_PORT, () => {
+const server = app.listen(PORT, () => {
   if (!inTestEnv) {
-    console.log(`Server running on port ${SERVER_PORT}`);
+    console.log(`Server running on port ${PORT}`);
   }
 });
 
