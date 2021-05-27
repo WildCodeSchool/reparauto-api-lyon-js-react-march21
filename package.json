@@ -1,19 +1,16 @@
 {
-  "name": "contacts-api",
+  "name": "express-api",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start:all": "docker-compose up",
     "start:server": "node app.js",
-    "start:server:watch": "nodemon -e yaml,js,json app.js",
+    "start:server:watch": "nodemon app.js",
     "setup-db": "docker-compose up -d db",
-    "create-db-migration": "db-migrate create $NAME --sql-file",
-    "migrate-db": "db-migrate up",
-    "rollback-last-db-migration": "db-migrate down",
-    "start": "npm-run-all migrate-db start:server",
-    "start:watch": "npm-run-all migrate-db start:server:watch",
-    "dev": "npm-run-all setup-db wait-for-db start:watch",
+    "start": "npm-run-all start:server",
+    "start:watch": "npm-run-all start:server:watch",
+    "dev": "npm-run-all setup-db start:watch",
     "test": "NODE_ENV=test jest --testRunner='jest-circus/runner' --maxWorkers=1",
     "test:setup-db": "docker-compose up -d test_db",
     "test:migrate-db": "db-migrate up -e test",
@@ -47,10 +44,7 @@
     "joi": "^17.3.0",
     "lodash": "^4.17.20",
     "mysql2": "^2.2.5",
-    "npm-run-all": "^4.1.5",
-    "swagger-jsdoc": "^4.3.2",
-    "swagger-ui-express": "^4.1.5",
-    "yamljs": "^0.3.0"
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "eslint": "^7.14.0",

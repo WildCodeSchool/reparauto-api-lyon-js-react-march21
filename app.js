@@ -1,33 +1,13 @@
 const express = require('express');
-const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const YAML = require('yamljs');
-const { inTestEnv, inProdEnv, SERVER_PORT } = require('./env');
-const handleServerInternalError = require('./middlewares/handleServerInternalError');
-const handleValidationError = require('./middlewares/handleValidationError');
-const handleRecordNotFoundError = require('./middlewares/handleRecordNotFoundError');
+const { inTestEnv, SERVER_PORT } = require('./env');
 
 const app = express();
 app.set('x-powered-by', false);
 
-// docs
-if (!inProdEnv && !inTestEnv) {
-  const swaggerDocument = YAML.load('./docs/swagger.yaml');
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-}
-
-// pre-route middlewares
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // routes
 require('./routes')(app);
-
-// post-route middlewares
-app.use(handleRecordNotFoundError);
-app.use(handleValidationError);
-app.use(handleServerInternalError);
 
 // server setup
 const server = app.listen(SERVER_PORT, () => {
