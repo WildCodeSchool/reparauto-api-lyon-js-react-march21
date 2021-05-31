@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "Reviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Client": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "Rating": {
+      "type": "integer"
+    },
+    "Validation": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
