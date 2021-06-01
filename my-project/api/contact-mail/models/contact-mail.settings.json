@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_mails",
+  "info": {
+    "name": "ContactMail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ContactContent": {
+      "type": "richtext",
+      "default": "Contact mail content",
+      "required": true
+    },
+    "UserEmail": {
+      "type": "string",
+      "required": true
+    },
+    "CarDescription": {
+      "type": "text",
+      "required": true
+    },
+    "ContactPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

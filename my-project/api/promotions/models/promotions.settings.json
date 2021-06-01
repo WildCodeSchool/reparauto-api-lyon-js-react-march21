@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotions",
+  "info": {
+    "name": "Promotions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PromotionDescription": {
+      "type": "text",
+      "required": true
+    },
+    "PromotionName": {
+      "type": "string",
+      "required": true
+    },
+    "PromotionPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "PromotionFactor": {
+      "type": "integer",
+      "required": true
+    },
+    "PromotionDate": {
+      "type": "date"
+    }
+  }
+}
