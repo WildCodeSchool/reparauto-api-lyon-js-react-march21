@@ -38,6 +38,10 @@
     },
     "PromotionDate": {
       "type": "date"
+    },
+    "EndPromotionDate": {
+      "type": "date",
+      "required": true
     }
   }
 }

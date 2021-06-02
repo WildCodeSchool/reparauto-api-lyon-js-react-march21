@@ -36,6 +36,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "ContactImmat": {
+      "type": "string",
+      "required": true
+    },
+    "ContactModel": {
+      "type": "string",
+      "required": true
+    },
+    "ContactBrand": {
+      "type": "string",
+      "required": true
     }
   }
 }

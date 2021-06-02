@@ -35,6 +35,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "AppointmentsImmat": {
+      "type": "string",
+      "required": true
+    },
+    "Model": {
+      "type": "string",
+      "required": true
+    },
+    "Brand": {
+      "type": "string",
+      "required": true
     }
   }
 }

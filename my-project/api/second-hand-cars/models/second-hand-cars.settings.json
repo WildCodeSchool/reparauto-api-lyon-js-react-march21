@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "second_hand_cars",
   "info": {
-    "name": "SecondHandCars"
+    "name": "SecondHandCars",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -28,7 +29,7 @@
       "required": true,
       "default": "Secondhand vehicule description"
     },
-    "Designation": {
+    "SecondHandModel": {
       "type": "string",
       "default": "Modele/Marque",
       "required": true
@@ -36,6 +37,9 @@
     "Price": {
       "type": "decimal",
       "required": true
+    },
+    "SecondHandBrand": {
+      "type": "string"
     }
   }
 }
