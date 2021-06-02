@@ -47,6 +47,10 @@
     "Brand": {
       "type": "string",
       "required": true
+    },
+    "AppointmentsUserName": {
+      "type": "string",
+      "required": true
     }
   }
 }
