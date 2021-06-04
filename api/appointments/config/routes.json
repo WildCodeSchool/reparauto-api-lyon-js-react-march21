@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/appointments",
+      "handler": "appointments.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/count",
+      "handler": "appointments.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/:id",
+      "handler": "appointments.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/appointments",
+      "handler": "appointments.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/appointments/:id",
+      "handler": "appointments.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/appointments/:id",
+      "handler": "appointments.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

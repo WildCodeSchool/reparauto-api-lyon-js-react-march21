@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "name": "Appointments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AppointmentAsk": {
+      "type": "date",
+      "required": true
+    },
+    "AppointmentsUserEmail": {
+      "type": "string",
+      "required": true
+    },
+    "AppointmentsUserAskContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "AppointmentsPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "AppointmentsImmat": {
+      "type": "string",
+      "required": true
+    },
+    "Model": {
+      "type": "string",
+      "required": true
+    },
+    "Brand": {
+      "type": "string",
+      "required": true
+    },
+    "AppointmentsUserName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

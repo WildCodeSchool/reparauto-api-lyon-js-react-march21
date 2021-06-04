@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/second-hand-cars",
+      "handler": "second-hand-cars.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/second-hand-cars/count",
+      "handler": "second-hand-cars.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/second-hand-cars/:id",
+      "handler": "second-hand-cars.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/second-hand-cars",
+      "handler": "second-hand-cars.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/second-hand-cars/:id",
+      "handler": "second-hand-cars.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/second-hand-cars/:id",
+      "handler": "second-hand-cars.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
