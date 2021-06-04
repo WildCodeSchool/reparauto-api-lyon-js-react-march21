@@ -1,1 +1,3 @@
-# reparauto-api-lyon-js-react-march21
+# Strapi application
+
+A quick description of your strapi application
