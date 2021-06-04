@@ -21,8 +21,8 @@
     "Rating": {
       "type": "integer"
     },
-    "Validation": {
-      "type": "boolean",
+    "ReviewsClientName": {
+      "type": "string",
       "required": true
     }
   }
