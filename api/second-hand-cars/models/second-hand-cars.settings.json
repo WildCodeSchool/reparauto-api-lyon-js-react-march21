@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "second_hand_cars",
+  "info": {
+    "name": "SecondHandCars",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "default": "Secondhand vehicule description"
+    },
+    "SecondHandModel": {
+      "type": "string",
+      "default": "Modele/Marque",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true
+    },
+    "SecondHandBrand": {
+      "type": "string"
+    }
+  }
+}

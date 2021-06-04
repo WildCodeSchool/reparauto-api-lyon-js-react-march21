@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contact-mails",
+      "handler": "contact-mail.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contact-mails/count",
+      "handler": "contact-mail.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contact-mails/:id",
+      "handler": "contact-mail.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/contact-mails",
+      "handler": "contact-mail.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contact-mails/:id",
+      "handler": "contact-mail.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contact-mails/:id",
+      "handler": "contact-mail.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
