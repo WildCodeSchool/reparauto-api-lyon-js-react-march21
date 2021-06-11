@@ -8,6 +8,7 @@ VOLUME /srv/app
 
 RUN rm -rf node_modules
 RUN yarn 
+RUN yarn global add strapi
 RUN chmod +x docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
