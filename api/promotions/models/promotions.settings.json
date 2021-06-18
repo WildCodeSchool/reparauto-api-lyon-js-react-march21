@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "promotions",
   "info": {
-    "name": "Promotions",
+    "name": "promotions",
     "description": ""
   },
   "options": {

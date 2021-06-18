@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "rates",
   "info": {
-    "name": "ServicesRates",
+    "name": "services",
     "description": ""
   },
   "options": {

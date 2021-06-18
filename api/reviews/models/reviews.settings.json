@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "reviews",
   "info": {
-    "name": "Reviews",
+    "name": "avisclients",
     "description": ""
   },
   "options": {

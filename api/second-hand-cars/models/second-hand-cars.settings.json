@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "second_hand_cars",
   "info": {
-    "name": "SecondHandCars",
+    "name": "occasions",
     "description": ""
   },
   "options": {
