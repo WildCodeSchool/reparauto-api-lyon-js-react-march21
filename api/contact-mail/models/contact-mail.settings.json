@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "contact_mails",
   "info": {
-    "name": "ContactMail",
+    "name": "contact-mail",
     "description": ""
   },
   "options": {
