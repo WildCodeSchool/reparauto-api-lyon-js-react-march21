@@ -12,15 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "AppointmentAsk": {
+    "AppointmentDate": {
       "type": "date",
-      "required": true
+      "required": false
     },
-    "AppointmentsUserEmail": {
+    "AppointmentsEmail": {
       "type": "string",
       "required": true
     },
-    "AppointmentsUserAskContent": {
+    "AppointmentsContent": {
       "type": "richtext",
       "required": true
     },
@@ -36,7 +36,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "AppointmentsImmat": {
+    "AppointmentsImmatriculation": {
       "type": "string",
       "required": true
     },
@@ -48,7 +48,7 @@
       "type": "string",
       "required": true
     },
-    "AppointmentsUserName": {
+    "AppointmentsName": {
       "type": "string",
       "required": true
     }
