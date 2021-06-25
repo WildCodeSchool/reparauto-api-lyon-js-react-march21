@@ -5,10 +5,10 @@ const emailer = require('./emailer');
 const app = express();
 app.use(express.json());
 require('dotenv').config();
-
+*/
 
 // route for contact mail
-
+/*
 app.post('/contact-mails', (req, res) => {
     const { email, name, subject, description } = req.body;
     // error handlings joi
@@ -29,9 +29,9 @@ app.post('/contact-mails', (req, res) => {
       }
     );
   });
-
+*/
   /* ********************** server setup ********************** */ 
-  /*
+ /*
   app.listen(
     PORT,
     () => {
@@ -41,4 +41,4 @@ app.post('/contact-mails', (req, res) => {
     }
   );
   
-  */
+*/

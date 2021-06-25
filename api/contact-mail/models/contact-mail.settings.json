@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "contact_mails",
+  "collectionName": "contact-mails",
   "info": {
     "name": "contact-mail",
     "description": ""
