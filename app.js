@@ -8,17 +8,17 @@ require('dotenv').config();
 */
 
 // route for contact mail
-/*
+
 app.post('/contact-mails', (req, res) => {
-    const { email, name, subject, description } = req.body;
+    const { ContactContent, UserEmail, CarDescription, ContactPhotos, ContactImmat, ContactModel, ContactBrand } = req.body;
     // error handlings joi
     emailer.sendMail(
       {
         from: 'maupied69@hotmail.com',
         to: 'reparautomobilemail@gmail.com',
         subject,
-        text: `${name} tried to reach you with this message : ${description} from this email : ${email}`,
-        html: `${name} tried to reach you with this message : ${description} from this email : ${email}`,
+        text: `${UserEmail} tried to reach you with this message : ${CarDescription} from this email : ${ContactModel}`,
+        html: `${UserEmail} tried to reach you with this message : ${CarDescription} from this email : ${ContactModel}`,
       },
       (err, info) => {
         if (err) {
@@ -29,9 +29,9 @@ app.post('/contact-mails', (req, res) => {
       }
     );
   });
-*/
+
   /* ********************** server setup ********************** */ 
- /*
+ 
   app.listen(
     PORT,
     () => {
@@ -41,4 +41,3 @@ app.post('/contact-mails', (req, res) => {
     }
   );
   
-*/
