@@ -12,28 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ServiceLow": {
-      "type": "text",
-      "required": true
+    "Titre": {
+      "type": "string"
     },
-    "ServiceLowPrice": {
-      "type": "integer",
-      "required": true
+    "Couleur": {
+      "type": "string"
     },
-    "ServiceHigh": {
-      "type": "text"
-    },
-    "ServiceHighPrice": {
-      "type": "integer"
-    },
-    "OtherService": {
-      "type": "text"
-    },
-    "OtherServicePrice": {
-      "type": "integer"
-    },
-    "Picture": {
-      "model": "file",
+    "Image": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -44,8 +30,11 @@
       "required": false,
       "pluginOptions": {}
     },
-    "CardColor": {
-      "type": "string"
+    "Description": {
+      "type": "text"
+    },
+    "Prix": {
+      "type": "decimal"
     }
   }
 }
