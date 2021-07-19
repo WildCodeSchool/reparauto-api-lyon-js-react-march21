@@ -14,4 +14,4 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 WORKDIR /srv/app
 
-CMD ["strapi", "develop"]
+# CMD ["npm", "start"]

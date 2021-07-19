@@ -1,9 +1,8 @@
 version: "3"
 
 services:
-  strapi:
-    container_name: strapi
-    image: strapi/strapi
+  server:
+    container_name: reparauto
     environment:
       - DATABASE_CLIENT=mysql
       - DATABASE_HOST=db
@@ -17,9 +16,12 @@ services:
       - ./:/srv/app
     depends_on:
       - db
+    networks:
+      - reparauto-network
+    build: "./"
 
   db:
-    container_name: mysql
+    container_name: mysql-reparauto
     image: mysql:5.7
     restart: always
     command: --default-authentication-plugin=mysql_native_password
@@ -30,6 +32,11 @@ services:
       MYSQL_ROOT_PASSWORD: strapi
     volumes:
       - reparauto-db:/var/lib/mysql
+    networks:
+      - reparauto-network
 
 volumes:
   reparauto-db:
+
+networks:
+  reparauto-network:
