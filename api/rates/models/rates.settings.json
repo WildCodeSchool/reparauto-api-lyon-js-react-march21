@@ -12,25 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Service": {
+    "ServiceLow": {
       "type": "text",
       "required": true
     },
-    "ServicePrice": {
-      "type": "decimal",
+    "ServiceLowPrice": {
+      "type": "integer",
       "required": true
     },
-    "ServicePhoto": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
+    "ServiceHigh": {
+      "type": "text"
+    },
+    "ServiceHighPrice": {
+      "type": "integer"
+    },
+    "OtherService": {
+      "type": "text"
+    },
+    "OtherServicePrice": {
+      "type": "integer"
     }
   }
 }
