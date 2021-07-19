@@ -8,10 +8,13 @@ WORKDIR /srv/app
 RUN rm -rf node_modules
 RUN npm install
 RUN npm install -g add strapi
-RUN chmod +x docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+# RUN chmod +x docker-entrypoint.sh
+
+# ENTRYPOINT ["docker-entrypoint.sh"]
 
 WORKDIR /srv/app
+
+RUN npm build
 
 CMD ["npm", "start"]
