@@ -1,5 +1,7 @@
 FROM strapi/base:14
 
+ENV NODE_ENV production
+
 RUN mkdir /srv/app && chown 1000:1000 -R /srv/app
 
 COPY . /srv/app
