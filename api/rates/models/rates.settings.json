@@ -17,11 +17,7 @@
       "required": true
     },
     "ServiceLowPrice": {
-<<<<<<< HEAD
-      "type": "decimal",
-=======
       "type": "integer",
->>>>>>> 7830864714fd022b75e772bd19f4afef57a75958
       "required": true
     },
     "ServiceHigh": {
@@ -35,6 +31,42 @@
     },
     "OtherServicePrice": {
       "type": "integer"
+    },
+    "serviceLowPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "serviceHighPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "otherServicePhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
