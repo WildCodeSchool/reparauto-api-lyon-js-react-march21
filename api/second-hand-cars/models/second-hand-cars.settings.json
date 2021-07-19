@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Photos": {
+    "photos": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -23,21 +23,24 @@
       "required": true,
       "pluginOptions": {}
     },
-    "Description": {
+    "description": {
       "type": "text",
       "required": true,
       "default": "Secondhand vehicule description"
     },
-    "SecondHandModel": {
+    "model": {
       "type": "string",
       "default": "Modele/Marque",
       "required": true
     },
-    "Price": {
-      "type": "decimal",
+    "prix": {
+      "type": "integer",
       "required": true
     },
-    "SecondHandBrand": {
+    "marque": {
+      "type": "string"
+    },
+    "titre": {
       "type": "string"
     }
   }

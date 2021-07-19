@@ -17,7 +17,11 @@
       "required": true
     },
     "ServiceLowPrice": {
+<<<<<<< HEAD
       "type": "decimal",
+=======
+      "type": "integer",
+>>>>>>> 7830864714fd022b75e772bd19f4afef57a75958
       "required": true
     },
     "ServiceHigh": {
