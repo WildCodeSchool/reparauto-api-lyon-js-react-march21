@@ -15,6 +15,6 @@ RUN npm install -g add strapi
 
 WORKDIR /srv/app
 
-RUN npm build
+RUN npm run build
 
 CMD ["npm", "start"]
