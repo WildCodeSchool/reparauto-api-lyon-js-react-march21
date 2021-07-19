@@ -7,7 +7,7 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": false,
     "draftAndPublish": true
   },
   "pluginOptions": {},
@@ -16,9 +16,8 @@
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
+        
       ],
       "plugin": "upload",
       "required": true,
