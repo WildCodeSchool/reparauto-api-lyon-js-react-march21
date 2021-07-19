@@ -6,15 +6,7 @@ COPY . /srv/app
 WORKDIR /srv/app
 
 RUN rm -rf node_modules
-RUN npm install
-RUN npm install -g add strapi
+RUN yarn install
+RUN yarn run build
 
-# RUN chmod +x docker-entrypoint.sh
-
-# ENTRYPOINT ["docker-entrypoint.sh"]
-
-WORKDIR /srv/app
-
-RUN npm run build
-
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
