@@ -9,8 +9,6 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async find(ctx, populate) {
-    console.log(ctx.query);
-
     const query = ctx.query || {};
 
     const entities = await strapi.query("reviews").find(
@@ -30,8 +28,7 @@ module.exports = {
   },
 
   async create(ctx) {
-    let entity;
-    entity = await strapi.services.reviews.create({
+    const entity = await strapi.services.reviews.create({
       ...ctx.request.body,
       published_at: null,
     });
