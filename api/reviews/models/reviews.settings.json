@@ -24,11 +24,6 @@
     "ReviewsClientName": {
       "type": "string",
       "required": true
-    },
-    "ValidatedNotice": {
-      "type": "boolean",
-      "default": false,
-      "required": false
     }
   }
 }
